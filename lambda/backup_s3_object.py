@@ -5,7 +5,7 @@ STEPS
 1. Create source and primary bucket
 2. Create IAM role for lambda with [AmazonS3FullAccess, CloudWatchLogsFullAccess] policies  to S3(Testing)
 3. Create lambda function
-4. Add a lambda trigger for S3 post event and choose the s3 source bucket
+4. Add a lambda trigger for S3 post event and choose the s3 source bucket // In s3 add Event Notification in Properties
 '''
 
 import os
