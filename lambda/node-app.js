@@ -140,7 +140,8 @@ exports.handler = async (event, context) => {
       break;
     case event.httpMethod === 'PATCH' && event.path === productPath:
       const requestBody = JSON.parse(event.body);
-      response = await modifyProduct(requestBody.productId, requestBody.updateKey, requestBody.updateValue);
+      const { _productId, updateKey, updateValue } = requestBody;
+      response = await modifyProduct(_productId, updateKey, updateValue);
       break;
     case event.httpMethod === 'DELETE' && event.path === productPath:
       const productDeleteId = JSON.parse(event.body).productId;

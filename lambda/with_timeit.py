@@ -1,14 +1,15 @@
-import functools
 import json
 import logging
 import time
+
+from functools import wraps
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 
 def timeit(func):
-    @functools.wraps(func)
+    @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()
         result = func(*args, **kwargs)

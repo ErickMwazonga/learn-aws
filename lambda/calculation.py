@@ -29,5 +29,5 @@ if __name__ == "__main__":
         "number": 3
     }
 
-    result = lambda_handler(test_event, None)
+    result = lambda_handler(event=test_event, context=None)
     print(result)

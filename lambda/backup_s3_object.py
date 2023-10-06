@@ -21,7 +21,6 @@ def lambda_handler(event, context):
     backup_bucket_name = 'lazuli-backup-bucket'
 
     for record in event['Records']:
-        # Get the key (object key) from the S3 event
         source_key = record['s3']['object']['key']
 
         # Construct the target (backup) key
